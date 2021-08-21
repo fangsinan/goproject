@@ -45,7 +45,7 @@ func Post(url string,postData map[string]string,Header map[string]string) string
 
 func Get(url string) string {
 	req, _ := http.NewRequest("GET", url, nil)
-	//req.Header.Set("authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcHAudjQuYXBpLm5sc2dhcHAuY29tXC9hcGlcL3Y0XC9hdXRoXC9sb2dpbiIsImlhdCI6MTYyODA2MDcyOCwiZXhwIjoxNjI5MzU2NzI4LCJuYmYiOjE2MjgwNjA3MjgsImp0aSI6InJKTVVjMGNPRjBjMjFhRmIiLCJzdWIiOjc1Njc0NCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.m5xV9EWf6jyuXYcG8XGvqnlP98l3lcmddv3ZCblzelY")
+	//req.Header.Set("authorization", "as*21^31no&")
 	
 	resp, err := (&http.Client{}).Do(req)
 	//resp, err := http.Get(serviceUrl + "/topic/query/false/lsj")
