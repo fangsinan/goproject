@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-
+//POST 请求
 func Post(url string,postData map[string]string,Header map[string]string) string {
 
 
@@ -42,7 +42,7 @@ func Post(url string,postData map[string]string,Header map[string]string) string
 
 
 
-
+//Get 请求
 func Get(url string) string {
 	req, _ := http.NewRequest("GET", url, nil)
 	//req.Header.Set("authorization", "as*21^31no&")
@@ -60,3 +60,17 @@ func Get(url string) string {
 }
 
 
+
+// JsonToMap 
+func JsonToMap(jsonStr string) (map[string]interface{}, error) {
+     //创建一个map
+    m := make(map[string]interface{}, 4)
+ 
+    err := json.Unmarshal([]byte(jsonStr), &m) //第二个参数要地址传递
+    if err != nil {
+        fmt.Println("err = ", err)
+        return nil, err
+    }
+ 
+    return m, nil
+}
